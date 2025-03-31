@@ -1,0 +1,81 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Laptop",
+      "price": 9800,
+      "description": "Apple MacBook Air Laptop: Apple M1 chip, 13.3-inch/33.74 cm Retina Display, 8GB RAM, 256GB SSD Storage, Backlit Keyboard, FaceTime HD Camera, Touch ID. Works with iPhone/iPad; Space Grey",
+      "imageUrl": "https://img.etimg.com/thumb/width-420,height-315,imgsize-46666,resizemode-75,msid-111048048/top-trending-products/electronics/laptops/10-best-premium-laptops-sleek-powerful-and-worth-every-penny/premium-laptop.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Laptop",
+      "price": 15000,
+      "description": "Lenovo IdeaPad Slim 1 AMD Ryzen 5 5500U 15.6 HD Thin and Light Laptop (16GB/512GB SSD/Integrated",
+      "imageUrl": "https://www.livemint.com/lm-img/img/2024/06/18/1600x900/laptoppppp_cleanup_1718705991705_1718706003867.PNG"
+    },
+    {
+      "id": "3",
+      "name": "Smartphone",
+      "price": 699.99,
+      "description": "OnePlus Nord CE3 5G (Aqua Surge, 128 GB)  (8 GB RAM)",
+      "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2023/8/337487292/ST/JB/TD/189620676/oneplus-nord-ce-3-5g-1000x1000.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Smartphone",
+      "price": 900,
+      "description": "OPPO Find X8 Pro Lightning Snap, AI Telescope Zoom, 5910mAh Battery to support 26-hour streaming",
+      "imageUrl": "https://www.oppo.com/content/dam/oppo/common/mkt/v2-2/find-x8-series-en/find-x8-pro/listpage/432-600-white.png"
+    },
+    {
+      "id": "5",
+      "name": "Headphones",
+      "price": 149.99,
+      "description": "boAt Rockerz 550 Bluetooth Headset with Mic (Dual Connectivity, Over Ear, Red)",
+      "imageUrl": "https://www.promotionalwears.com/image/cache/catalog/data/branded-gifts/boAt/headphones/boat-rockerz-558-red-wireless-headphone-500x500.png"
+    },
+    {
+      "id": "6",
+      "name": "Headphones",
+      "price": 200.99,
+      "description": "ZEBRONICS Jet Premium Wired Gaming On Ear Headphone with LED Light for earcups",
+      "imageUrl": "https://elitehubs.com/cdn/shop/collections/Gaming_Headphone_Under_Rs.1000.png?v=1704377129"
+    },
+    {
+      "id": "7",
+      "name": "Ear Buds",
+      "price": 5000,
+      "description": "Noise Pure Pods with AirWave technology, 80 Hours Playtime, ENC with Quad Mic Bluetooth  (Power Black, True Wireless)",
+      "imageUrl": "https://rukminim2.flixcart.com/image/850/1000/xif0q/headphone/o/8/n/-original-imagw5vkpgkg36gd.jpeg?q=90&crop=false"
+    },
+    {
+      "id": "8",
+      "name": "Ear Buds",
+      "price": 2000,
+      "description": "Boat Airdopes 161 With Asap Charge, 10mm Drivers And 17 Hours Playback Bluetooth Headset",
+      "imageUrl": "https://www.boat-lifestyle.com/cdn/shop/files/ACCG6DS7WDJHGWSH_0.png?v=1727669669"
+    },
+    {
+      "id": "9",
+      "name": "Smartwatch",
+      "price": 15000,
+      "description": "SKG Smart Watch, Fitness Tracker with 5ATM Swimming Waterproof, Health Monitor for Heart Rate, Blood Oxygen, Sleep, 1.7'' Touch Screen Bluetooth Smartwatch Fitness Watch for Android-iPhone iOS, V7",
+      "imageUrl": "https://m.media-amazon.com/images/I/71JU-bUt-sL.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Smartwatch",
+      "price": 15000,
+      "description": "mi Smart Watch for Men & Women, Bluetooth Smartwatch Touch Screen Bluetooth Smart Watches for Android iOS Phones Wrist Phone Watch, Women - Royal Black ID116 Smart Watch - Black",
+      "imageUrl": "https://m.media-amazon.com/images/I/61ZjlBOp+rL.jpg"
+    },
+    {
+      "id": "b24f",
+      "name": "watch",
+      "price": 3000,
+      "description": "Fastrack Tick Tock Black Dial Watch for Guys",
+      "imageUrl": "https://www.fastrack.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwe6c93cc0/images/Fastrack/Catalog/3287NL01_1.jpg?sw=600&sh=600"
+    }
+  ]
+}

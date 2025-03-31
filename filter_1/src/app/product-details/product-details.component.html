@@ -1,0 +1,165 @@
+<div class="product-management">
+  <h2>Product Management</h2>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input 
+      type="text" 
+      [(ngModel)]="searchTerm" 
+      (input)="search(searchTerm)" 
+      placeholder="Search products..."
+    >
+    @if (searchTerm) {
+      <button (click)="clearSearch()">Clear</button>
+    }
+  </div>
+
+  <!-- Filter Section -->
+  <div class="filter-section">
+    <h3>Filter Products</h3>
+    <div class="filter-controls">
+      <div class="filter-group">
+        <label>Price Range:</label>
+        <div class="price-range">
+          <input type="number" [(ngModel)]="filters.minPrice" 
+                 (change)="applyFilters()" placeholder="Min price" min="0">
+          <span>to</span>
+          <input type="number" [(ngModel)]="filters.maxPrice" 
+                 (change)="applyFilters()" placeholder="Max price" min="0">
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label>Category:</label>
+        <select [(ngModel)]="filters.category" (change)="applyFilters()">
+          <option value="">All Categories</option>
+          @for (category of categories; track category) {
+            <option [value]="category">{{ category }}</option>
+          }
+        </select>
+      </div>
+
+      <button class="reset-btn" (click)="resetFilters()">Reset Filters</button>
+    </div>
+  </div>
+
+  <button class="toggle-form-btn" (click)="toggleAddProductForm()">
+    {{ showAddProductForm ? 'Cancel' : 'Add New Product' }}
+  </button>
+
+  @if (showAddProductForm) {
+    <div class="add-product-form">
+      <h3>Add New Product</h3>
+      <div class="form-group">
+        <label>Product Name</label>
+        <input [(ngModel)]="newProduct.name" placeholder="Enter product name" required>
+      </div>
+      <div class="form-group">
+        <label>Price</label>
+        <input type="number" [(ngModel)]="newProduct.price" 
+              placeholder="Enter price" min="0" step="0.01" required>
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <textarea [(ngModel)]="newProduct.description" 
+                placeholder="Enter description"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Category</label>
+        <input [(ngModel)]="newProduct.category" placeholder="Enter category">
+      </div>
+      <div class="form-group">
+        <label>Image URL</label>
+        <input [(ngModel)]="newProduct.imageUrl" 
+              placeholder="Enter image URL">
+        @if (newProduct.imageUrl) {
+          <div class="image-preview">
+            <img [src]="newProduct.imageUrl" alt="Product preview">
+          </div>
+        }
+      </div>
+      <button class="submit-btn" (click)="addProduct()">Add Product</button>
+    </div>
+  }
+
+  @if (editingProduct) {
+    <div class="edit-product-form">
+      <h3>Edit Product</h3>
+      <div class="form-group">
+        <label>Product Name</label>
+        <input [(ngModel)]="editingProduct.name" placeholder="Enter product name" required>
+      </div>
+      <div class="form-group">
+        <label>Price</label>
+        <input type="number" [(ngModel)]="editingProduct.price" 
+              placeholder="Enter price" min="0" step="0.01" required>
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <textarea [(ngModel)]="editingProduct.description" 
+                placeholder="Enter description"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Category</label>
+        <input [(ngModel)]="editingProduct.category" placeholder="Enter category">
+      </div>
+      <div class="form-group">
+        <label>Image URL</label>
+        <input [(ngModel)]="editingProduct.imageUrl" 
+              placeholder="Enter image URL">
+        @if (editingProduct.imageUrl) {
+          <div class="image-preview">
+            <img [src]="editingProduct.imageUrl" alt="Product preview">
+          </div>
+        }
+      </div>
+      <div class="form-actions">
+        <button class="submit-btn" (click)="updateProduct()">Update Product</button>
+        <button class="cancel-btn" (click)="cancelEdit()">Cancel</button>
+      </div>
+    </div>
+  }
+
+  <div class="product-list">
+    <h3>Product List</h3>
+    @if (isLoading) {
+      <div class="loading-spinner">
+        <div class="spinner"></div>
+        <p>Loading products...</p>
+      </div>
+    } @else {
+      @if (filteredProducts.length > 0) {
+        <div class="product-grid">
+          @for (product of filteredProducts; track product.id) {
+            <div class="product-card">
+              <div class="image-container">
+                <img [src]="product.imageUrl" [alt]="product.name" class="product-image"
+                    (error)="product.imageUrl = 'assets/images/default-product.jpg'">
+              </div>
+              <div class="product-info">
+                <h4>{{ product.name }}</h4>
+                <p class="price">₹{{ product.price | number:'1.2-2' }}</p>
+                @if (product.category) {
+                  <p class="category">Category: {{ product.category }}</p>
+                }
+                <p class="description">{{ product.description }}</p>
+                <div class="product-actions">
+                  <button class="edit-btn" (click)="editProduct(product)">Edit</button>
+                  <button class="delete-btn" (click)="deleteProduct(product.id)">Delete</button>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      } @else {
+        <p class="empty-message">
+          @if (searchTerm || filters.minPrice || filters.maxPrice || filters.category) {
+            No products match your filters
+          } @else {
+            No products available
+          }
+        </p>
+      }
+    }
+  </div>
+</div>
