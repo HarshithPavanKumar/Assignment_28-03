@@ -1,0 +1,38 @@
+<div class="dashboard-container">
+  <h1>Employee Dashboard</h1>
+
+  <div class="controls">
+    <div class="search-container">
+      <input
+        type="text"
+        [(ngModel)]="searchTerm"
+        (input)="onSearch()"
+        placeholder="Search employees..."
+        class="search-input">
+    </div>
+    <div class="action-buttons">
+      <button (click)="toggleSortOrder()" class="btn btn-sort">
+        {{ sortOrder === 'asc' ? 'Z-A' : 'A-Z' }}
+      </button>
+      <button routerLink="/add-employee" class="btn btn-primary">
+        Add Employee
+      </button>
+    </div>
+  </div>
+
+  @if (isLoading) {
+  <div class="loading">Loading employees...</div>
+  } @else if (filteredEmployees.length === 0) {
+  <div class="no-results">
+    @if (searchTerm) {
+    No employees found matching "{{ searchTerm }}"
+    } @else {
+    No employees found
+    }
+  </div>
+  } @else {
+  <app-employee-list
+    [employees]="filteredEmployees"
+    (delete)="onDelete($event)"></app-employee-list>
+  }
+</div>

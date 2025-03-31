@@ -1,0 +1,52 @@
+{
+  "employees": [
+    {
+      "name": "TNR",
+      "email": "TNR@gmail.com",
+      "phone": "7093896106",
+      "department": "ECE",
+      "position": "Marketing Manager",
+      "id": "1"
+    },
+    {
+      "name": "Harshith",
+      "email": "harshith@gmail.com",
+      "phone": "8074641549",
+      "department": "CSE",
+      "position": "Full-stack",
+      "id": "2"
+    },
+    {
+      "name": "niteesh",
+      "email": "niteesh@gmail.com",
+      "phone": "9392402278",
+      "department": "ECE",
+      "position": "Back-end",
+      "id": "3"
+    },
+    {
+      "name": "biswanth",
+      "email": "biswanth@gmail.com",
+      "phone": "8330965896",
+      "department": "CSE",
+      "position": "Front-end",
+      "id": "f2e5"
+    },
+    {
+      "id": "91c8",
+      "name": "Dheeraj",
+      "email": "Dheeraj@gmail.com",
+      "phone": "7997879357",
+      "department": "CSE",
+      "position": "Cloud"
+    },
+    {
+      "id": "0dc0",
+      "name": "yaswanth",
+      "email": "yaswanth@gmail.com",
+      "phone": "7780715512",
+      "department": "EEE",
+      "position": "Testing"
+    }
+  ]
+}
